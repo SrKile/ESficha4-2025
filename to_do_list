@@ -1,38 +1,21 @@
 passo1 - criar grupos de trabalho (4-5)
 
-
-
 passo2 - definir team leader
 
-
 passo3 - escolher a aplicação que desejam
-
-
 	ex: app de gestão de finanças pessoais
 
-
 passo4 - elaborar a lista de requisitos funcionais
-
-
 	(tabela: index | descrição)
-
 
 passo5 - fazer o diagrama de casos de uso
 
-
 passo6 - escolher 2 casos de uso + modelo de domínio
 
-
 passo7 - para um dos casos
-
-
 	protótipo não funcional
-
-
 	descrição textual de cada caso
 
-
 passo8 - implementação
-
 
 passo9 - testes  unitários
