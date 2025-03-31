@@ -65,7 +65,7 @@ public class User {
                 ", dayOfBirth=" + dayOfBirth +
                 ", monthOfBirth=" + monthOfBirth +
                 ", yearOfBirth=" + yearOfBirth +
-                '}';
+                '}'+'\n';
     }
 }
  

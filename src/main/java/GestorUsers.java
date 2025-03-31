@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public class GestorUsers {
     private LinkedList<User> listaUsers;
 
-    public GestorUsers(LinkedList<User> listaUsers) {
+    public GestorUsers() {
         this.listaUsers = new LinkedList<>();
     }
 
@@ -22,5 +22,15 @@ public class GestorUsers {
 
     public User getUser(User user) {
         return listaUsers.get(listaUsers.indexOf(user));
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("listaUsers: \n");
+        for (User user : listaUsers){
+            sb.append(user);
+        }
+        return sb.toString();
     }
 }
