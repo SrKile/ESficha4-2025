@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public class GestorUsers {
     private LinkedList<User> listaUsers;
 
-    public GestorUsers(LinkedList<User> listaUsers) {
+    public GestorUsers() {
         this.listaUsers = new LinkedList<>();
     }
 
