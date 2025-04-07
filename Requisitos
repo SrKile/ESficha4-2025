@@ -1,11 +1,14 @@
 Requisitos:
 
-1º - Simular IRS
-2º - Mostrar/adicionar/remover despesas
-3º - Calcular quanto, o utilizador, gastou por mês
-4º - Partilhar a conta bancária com outro utilizador
-5º - Adicionar um novo utilizador
-6º - Adicionar uma nova conta bancária
-7º - Mostrar o saldo que o utilizador tem na conta
-8º - Fazer log in e log out
-9º - Aceder às definições do sistema
+RF1 - Simular IRS
+RF2 - Mostrar/adicionar/remover despesas
+RF3 - Calcular quanto, o utilizador, gastou por mês
+RF4 - Partilhar a conta bancária com outro utilizador
+RF5 - Adicionar um novo utilizador
+RF6 - Adicionar uma nova conta bancária
+RF7 - Mostrar o saldo que o utilizador tem na conta
+RF8 - Fazer log in e log out
+RF9 - Aceder às definições do sistema
+
+RNF1 - O sistema deve ter medidas de segurança, para proteger as informações e os dados dos utilizadores
+RNF2 - O sistema deve conseguir calcular contas complexas
