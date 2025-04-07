@@ -1,18 +1,19 @@
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.Year;
-import java.util.Date;
+import java.util.LinkedList;
 
-public class user {
+public class User {
     private String name;
     private int age;
     private String gender;
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
+    private LinkedList<Conta> listaContas;
+    private String phoneNumber;
 
-    public user(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
+    public User(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, String phoneNumber) {
         if(yearOfBirth < 1000 || yearOfBirth > LocalDate.now().getYear()){
             throw new IllegalArgumentException("Invalid year of birth");
         }
@@ -30,6 +31,8 @@ public class user {
         this.dayOfBirth = dayOfBirth;
         this.monthOfBirth = monthOfBirth;
         this.yearOfBirth = yearOfBirth;
+        this.listaContas = new LinkedList<>();
+        this.phoneNumber = phoneNumber;
 
         age = Period.between(LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth), LocalDate.now()).getYears();
     }
@@ -58,9 +61,17 @@ public class user {
         return yearOfBirth;
     }
 
+    public LinkedList<Conta> getListaContas() {
+        return new LinkedList<>(listaContas);
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     @Override
     public String toString() {
-        return "user{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
