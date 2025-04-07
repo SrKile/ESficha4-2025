@@ -1,18 +1,17 @@
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.Year;
-import java.util.Date;
 
-public class user {
+public class User {
     private String name;
     private int age;
     private String gender;
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
+    private String phoneNumber;
 
-    public user(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
+    public User(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, String phoneNumber) {
         if(yearOfBirth < 1000 || yearOfBirth > LocalDate.now().getYear()){
             throw new IllegalArgumentException("Invalid year of birth");
         }
@@ -58,9 +57,13 @@ public class user {
         return yearOfBirth;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     @Override
     public String toString() {
-        return "user{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
