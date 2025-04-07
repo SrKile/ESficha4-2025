@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class GestorUsers {
     private LinkedList<User> listaUsers;
@@ -7,13 +8,30 @@ public class GestorUsers {
         this.listaUsers = new LinkedList<>();
     }
 
-    public void addUser(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
-        User userAdd = new User(name, gender, dayOfBirth, monthOfBirth, yearOfBirth);
+    public void addUser(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, String phoneNumber) {
+        User userAdd = new User(name, gender, dayOfBirth, monthOfBirth, yearOfBirth, phoneNumber);
         listaUsers.add(userAdd);
     }
 
-    public boolean removerUser(User user) {
+    public void addUser(User user) {
+        listaUsers.add(user);
+    }
+
+    public boolean removerUser(User user){
         return listaUsers.remove(user);
+    }
+
+    public boolean removerUser(String phoneNumber){
+        User userToRemove = null;
+
+        for (User listaUser : listaUsers) {
+            userToRemove = listaUser;
+            if (Objects.equals(userToRemove.getPhoneNumber(), phoneNumber)) {
+                break;
+            }
+        }
+
+        return listaUsers.remove(userToRemove);
     }
 
     public LinkedList<User> getListaUsers() {
@@ -33,4 +51,6 @@ public class GestorUsers {
         }
         return sb.toString();
     }
+
+
 }
