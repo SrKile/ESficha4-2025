@@ -1,0 +1,27 @@
+Caso de uso IRS
+
+
+Pré condições:
+-> Ter aplicação instalada
+-> Ter conta criada
+-> Ter pelo menos uma despesa associada no ultimo ano fiscal
+
+Cenário Principal
+
+1- Inicia sessão na aplicação
+2- Utilizador seleciona a conta que quer usar
+3- Utilizador seleciona o submenu no canto superior direito para mostrar mais opções
+4- Sistema mostra uma lista de opções
+5- Utilizador seleciona a opção de simular IRS
+6- Utilizador é apresentado com uma lista de todos os gastos organizados por mês, com as categorias e taxas de IRS associadas automáticamente devido à "CATEGORIA" escolhida quando inseriu as despesas ao longo do ano
+7- Utilizador pode alterar as categorias ou montantes se for necessário
+8- Utilizador seleciona o "Simular IRS"
+9- Sistema calcula o IRS levando em conta todas as taxas de categorias diferentes, todos os montantes associados e ainda o escalão de IRS a ele associado, indo buscar este à conta do utilizador
+10- Sistema devolve o resultado para a página da simulação através de um popup
+
+
+Cenários Alternativos
+-> A Qualquer momento o utilizador pode "desistir" e voltar atrás
+
+Pós Condições
+-> Simulação do IRS está completa e o utiilizador sabe o resultado
