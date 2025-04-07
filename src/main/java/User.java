@@ -9,8 +9,9 @@ public class User {
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
+    private String phoneNumber;
 
-    public User(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
+    public User(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth, String phoneNumber) {
         if(yearOfBirth < 1000 || yearOfBirth > LocalDate.now().getYear()){
             throw new IllegalArgumentException("Invalid year of birth");
         }
@@ -54,6 +55,10 @@ public class User {
 
     public int getYearOfBirth() {
         return yearOfBirth;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     @Override
