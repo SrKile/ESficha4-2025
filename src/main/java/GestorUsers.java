@@ -12,7 +12,7 @@ public class GestorUsers {
         listaUsers.add(userAdd);
     }
 
-    public boolean removerUser(User user){
+    public boolean removerUser(User user) {
         return listaUsers.remove(user);
     }
 
@@ -28,7 +28,7 @@ public class GestorUsers {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("listaUsers: \n");
-        for (User user : listaUsers){
+        for (User user : listaUsers) {
             sb.append(user);
         }
         return sb.toString();

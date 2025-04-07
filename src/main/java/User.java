@@ -1,6 +1,7 @@
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.Year;
+import java.util.LinkedList;
 
 public class User {
     private String name;
@@ -9,18 +10,19 @@ public class User {
     private int dayOfBirth;
     private int monthOfBirth;
     private int yearOfBirth;
+    private LinkedList<Conta> listaContas;
 
     public User(String name, String gender, int dayOfBirth, int monthOfBirth, int yearOfBirth) {
-        if(yearOfBirth < 1000 || yearOfBirth > LocalDate.now().getYear()){
+        if (yearOfBirth < 1000 || yearOfBirth > LocalDate.now().getYear()) {
             throw new IllegalArgumentException("Invalid year of birth");
         }
-        if(dayOfBirth < 1 || dayOfBirth > 31){
-            if((dayOfBirth > 28 && monthOfBirth == 2) && Year.isLeap(yearOfBirth)){
+        if (dayOfBirth < 1 || dayOfBirth > 31) {
+            if ((dayOfBirth > 28 && monthOfBirth == 2) && Year.isLeap(yearOfBirth)) {
                 throw new IllegalArgumentException("Invalid day of birth for the month of february");
             }
             throw new IllegalArgumentException("Invalid day of birth");
         }
-        if(monthOfBirth < 1 || monthOfBirth > 12){
+        if (monthOfBirth < 1 || monthOfBirth > 12) {
             throw new IllegalArgumentException("Invalid month of birth");
         }
         this.name = name;
@@ -28,6 +30,7 @@ public class User {
         this.dayOfBirth = dayOfBirth;
         this.monthOfBirth = monthOfBirth;
         this.yearOfBirth = yearOfBirth;
+        this.listaContas = new LinkedList<>();
 
         age = Period.between(LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth), LocalDate.now()).getYears();
     }
@@ -56,6 +59,10 @@ public class User {
         return yearOfBirth;
     }
 
+    public LinkedList<Conta> getListaContas() {
+        return new LinkedList<>(listaContas);
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -65,7 +72,7 @@ public class User {
                 ", dayOfBirth=" + dayOfBirth +
                 ", monthOfBirth=" + monthOfBirth +
                 ", yearOfBirth=" + yearOfBirth +
-                '}'+'\n';
+                '}' + '\n';
     }
 }
  
